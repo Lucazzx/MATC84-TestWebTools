@@ -25,7 +25,7 @@ public class DriverFactory {
 			case FIREFOX: driver = new FirefoxDriver();break;
 			case CHROME: driver = new ChromeDriver();break;
 		}
-			driver.manage().window().minimize();
+			//driver.manage().window().minimize();
 		return driver;
 	}
 	
