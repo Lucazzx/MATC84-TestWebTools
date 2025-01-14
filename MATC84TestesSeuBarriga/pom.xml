@@ -19,8 +19,12 @@
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
   			<artifactId>maven-surefire-plugin</artifactId>
-  			<version>2.18.1</version>
+  			<version>3.5.2</version>
   			<configuration>
+  			    <useModulePath>false</useModulePath>
+                <dependenciesToScan>
+                    <dependency>org.junit.jupiter:junit-jupiter-api</dependency>
+                </dependenciesToScan>
   				<includes>
   					<include>com/lucassousa/suites/*.java</include>
   				</includes>
@@ -37,6 +41,22 @@
 	    <artifactId>junit-jupiter-api</artifactId>
 	    <version>5.11.4</version>
 	</dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.11.4</version>
+    </dependency>	
+	<dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-launcher</artifactId>
+        <version>1.11.4</version> 
+        <scope>test</scope>
+    </dependency>	
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+        <version>5.11.4</version>
+    </dependency>
     <dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
