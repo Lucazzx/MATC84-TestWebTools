@@ -16,4 +16,5 @@ import tests.SaldoTest;
     SaldoTest.class
 })
 public class SuiteGeral {
+	
 }
