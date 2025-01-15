@@ -62,7 +62,7 @@ public class BasePage {
 	    }
 
 	    
-	    public void selecionarCombo(String id, String[] esportes) {
+	    public void selecionarCombo(String id, String[] listaCombo) {
 	        WebElement element = getDriver().findElement(By.id(id));
 	        Select combo = new Select(element);
 	         
@@ -71,9 +71,9 @@ public class BasePage {
 	        for (WebElement opcao : todasOpcoes) {
 	            String textoOpcao = opcao.getText(); 
 	            
-	            for (String esporte : esportes) {
-	                if (textoOpcao.equalsIgnoreCase(esporte)) {
-	                    combo.selectByVisibleText(esporte);
+	            for (String elementoCombo : listaCombo) {
+	                if (textoOpcao.equalsIgnoreCase(elementoCombo)) {
+	                    combo.selectByVisibleText(elementoCombo);
 	                }
 	            }
 	        }
