@@ -61,7 +61,6 @@ public class BasePage {
 	        return elementos;
 	    }
 
-	    
 	    public void selecionarCombo(String id, String[] listaCombo) {
 	        WebElement element = getDriver().findElement(By.id(id));
 	        Select combo = new Select(element);
@@ -101,41 +100,7 @@ public class BasePage {
 			}
 	    	return encontrouElemento;
 	    }
-	    
-	    public void trocaParaAlerta () {
-	    	getDriver().switchTo().alert();
-	    }
-	    
-	    public void trocaEAceitaAlerta () {
-	    	getDriver().switchTo().alert().accept();
-	    }
-	    
-	    public void trocaENegaAlerta () {
-	    	getDriver().switchTo().alert().dismiss();
-	    }
-	     
-	    public String obterTextoAlerta () {
-	    	return getDriver().switchTo().alert().getText();
-	    }
-	    
-	    public void escreverAlerta (String texto) {
-	    	getDriver().switchTo().alert().sendKeys(texto);
-	    	getDriver().switchTo().alert().accept();
-	    }
-	    
-	    public void trocaParaFrame (String frame) {
-	    	getDriver().switchTo().frame(frame);
-	    }
-	    
-	    public void trocaParaJanela (String janela) {
-	    	getDriver().switchTo().window(janela);
-	    }
-	    
-	    public void executarJS (String comando, Object... parametros) {
-	    	JavascriptExecutor js = (JavascriptExecutor) getDriver();
-	    	js.executeScript(comando, parametros);
-	    }
-	    
+	       
 	    public WebElement obterCelula(String colunaBusca, String valor, String colunaBotao, String idTabela) {
 	    	WebElement tabela = getDriver().findElement(By.xpath("//*[@id='"+idTabela+"']"));
 	    	int idColuna = obterIndiceColuna(colunaBusca, tabela);
