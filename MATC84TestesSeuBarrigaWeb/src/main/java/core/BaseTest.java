@@ -22,7 +22,7 @@ public class BaseTest {
     private final MenuPage menuPage = new MenuPage();
 
     @BeforeEach
-    public void buildUp() {
+    public void setUp() {
         page.logar("lucassousa@email.com", "123");
     }
 
