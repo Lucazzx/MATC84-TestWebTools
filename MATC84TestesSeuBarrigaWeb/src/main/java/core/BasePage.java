@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 	
-	 public void escrever(String id, String texto) {
+	 	public void escrever(String id, String texto) {
 			getDriver().findElement(By.id(id)).clear();
 	    	getDriver().findElement(By.id(id)).sendKeys(texto);
 	    }
